@@ -2,7 +2,7 @@
   "name": "kozodoi-club-hack",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://Antonov2504.github.io/VK-vezdecode-task-3",
+  "homepage": "https://Antonov2504.github.io/VK-vezdecode-task-3/build",
   "main": "index.js",
   "scripts": {
     "start": "cross-env PORT=10888 react-scripts start",
