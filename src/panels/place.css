@@ -168,7 +168,7 @@
 .Place__order_disabled {
   background-color: #ccc;
   color: #000;
-  cursor: pointer;
+  user-select: none;
 }
 
 .Place__products-wrapper {
