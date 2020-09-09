@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/VK-vezdecode-task-3/static/css/main.794fb4fc.chunk.css",
-    "main.js": "/VK-vezdecode-task-3/static/js/main.2994f14e.chunk.js",
-    "main.js.map": "/VK-vezdecode-task-3/static/js/main.2994f14e.chunk.js.map",
+    "main.js": "/VK-vezdecode-task-3/static/js/main.97ed08a4.chunk.js",
+    "main.js.map": "/VK-vezdecode-task-3/static/js/main.97ed08a4.chunk.js.map",
     "runtime-main.js": "/VK-vezdecode-task-3/static/js/runtime-main.c73b915a.js",
     "runtime-main.js.map": "/VK-vezdecode-task-3/static/js/runtime-main.c73b915a.js.map",
     "static/js/2.84911def.chunk.js": "/VK-vezdecode-task-3/static/js/2.84911def.chunk.js",
     "static/js/2.84911def.chunk.js.map": "/VK-vezdecode-task-3/static/js/2.84911def.chunk.js.map",
     "index.html": "/VK-vezdecode-task-3/index.html",
-    "precache-manifest.f5d11cfc831421ec1f950f35905c979f.js": "/VK-vezdecode-task-3/precache-manifest.f5d11cfc831421ec1f950f35905c979f.js",
+    "precache-manifest.9882614bd0d7097960f4f704209cf7de.js": "/VK-vezdecode-task-3/precache-manifest.9882614bd0d7097960f4f704209cf7de.js",
     "service-worker.js": "/VK-vezdecode-task-3/service-worker.js",
     "static/css/main.794fb4fc.chunk.css.map": "/VK-vezdecode-task-3/static/css/main.794fb4fc.chunk.css.map",
     "static/js/2.84911def.chunk.js.LICENSE.txt": "/VK-vezdecode-task-3/static/js/2.84911def.chunk.js.LICENSE.txt",
@@ -28,6 +28,6 @@
     "static/js/runtime-main.c73b915a.js",
     "static/js/2.84911def.chunk.js",
     "static/css/main.794fb4fc.chunk.css",
-    "static/js/main.2994f14e.chunk.js"
+    "static/js/main.97ed08a4.chunk.js"
   ]
 }
