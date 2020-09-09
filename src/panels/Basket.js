@@ -9,8 +9,8 @@ import './place.css';
 
 
 const Basket = ({ match: { params: { areaId, itemId } }, foodAreas, order }) => {
-  const [faster, setFaster] = useState(JSON.parse((localStorage.getItem('faster') || 'null')));
   const [time, setTime] = useState(JSON.parse((localStorage.getItem('time') || 'null')) || '');
+  const [faster, setFaster] = useState(JSON.parse((localStorage.getItem('faster') || 'null')) || time.length > 0 ? false : true);
   const [selfService, setSelfService] = useState(JSON.parse((localStorage.getItem('selfService') || 'null')) || false);
   const area = foodAreas.filter(area => area.id === areaId)[0];
   const item = area.items.filter(item => item.id === itemId)[0];
@@ -130,15 +130,14 @@ const Basket = ({ match: { params: { areaId, itemId } }, foodAreas, order }) => 
             onChange={event => {
               setFaster(false);
               setTime(event.target.value);
-              console.log(time);
               localStorage.setItem('time', JSON.stringify(event.target.value));
               localStorage.setItem('faster', JSON.stringify(false));
             }}
-            onBlur={() => {
+            onBlur={event => {
               if (time === "") {
+                event.target.value = '';
                 setTime('');
                 setFaster(true);
-                console.log(time);
                 localStorage.setItem('faster', JSON.stringify(true));
               }
             }}
@@ -147,7 +146,6 @@ const Basket = ({ match: { params: { areaId, itemId } }, foodAreas, order }) => 
         <div className="Place__choice-item">
           <h3>С собой</h3>
           <Checkbox checked={selfService} onToggle={() => {
-            console.log(typeof selfService, !selfService);
             setSelfService(!selfService);
             localStorage.setItem('selfService', JSON.stringify(!selfService));
           }} />
@@ -156,7 +154,6 @@ const Basket = ({ match: { params: { areaId, itemId } }, foodAreas, order }) => 
           <h3>На месте</h3>
           <Checkbox checked={!selfService}
             onToggle={() => {
-              console.log(typeof selfService, !selfService);
               setSelfService(!selfService);
               localStorage.setItem('selfService', JSON.stringify(!selfService));
             }}
