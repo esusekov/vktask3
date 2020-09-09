@@ -28,7 +28,7 @@ const Place = ({ item, order, onIncrementPosition, onDecrementPosition, area }) 
 
   function Сheckout(props) {
     const price = props.price;
-    if (price != "0") {
+    if (price !== "0") {
       return <Link to={`/basket/${area.id}/${item.id}`} className="Place__order">
         Оформить заказ ({price})
     </Link>;
