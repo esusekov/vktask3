@@ -2,7 +2,7 @@
   "name": "kozodoi-club-hack",
   "version": "1.0.0",
   "description": "",
-  "homepage": ".",
+  "homepage": "https://esusekov.github.io/vktask3",
   "main": "index.js",
   "scripts": {
     "start": "cross-env PORT=10888 react-scripts start",
@@ -31,7 +31,7 @@
     "chalk": "^2.4.2",
     "core-js": "^3.1.4",
     "prop-types": "^15.7.2",
-    "react": "^16.13.1",
+    "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
     "react-router": "^5.1.1",
