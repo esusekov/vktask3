@@ -8,31 +8,31 @@ import edit from '../img/edit.svg';
 import './place.css';
 
 
-const Basket = ({ match: { params: { areaId, itemId }}, foodAreas, order }) => {
-  const [ faster, setFaster ] = useState(true);
-  const [ time, setTime ] = useState('');
-  const [ selfService, setSelfService ] = useState(false);
+const Basket = ({ match: { params: { areaId, itemId } }, foodAreas, order }) => {
+  const [faster, setFaster] = useState(true);
+  const [time, setTime] = useState('');
+  const [selfService, setSelfService] = useState(false);
   const area = foodAreas.filter(area => area.id === areaId)[0];
   const item = area.items.filter(item => item.id === itemId)[0];
 
-  const [ price, products ] = useMemo(() => {
+  const [price, products] = useMemo(() => {
     const foodIds = new Set((item.foods || []).map(item => item.id));
 
     const products = Object.values(order)
       .filter((value) => {
-        const { item: { id }} = value;
+        const { item: { id } } = value;
 
         return foodIds.has(id);
       });
 
     const result = products.reduce((result, value) => {
-        const { count, item } = value;
+      const { count, item } = value;
 
-        return result + parseInt(item.price) * parseInt(count);
-      }, 0);
+      return result + parseInt(item.price) * parseInt(count);
+    }, 0);
 
-    return [ accounting.formatNumber(result, 0, ' '), products ];
-  }, [ order, item ]);
+    return [accounting.formatNumber(result, 0, ' '), products];
+  }, [order, item]);
 
   return (
     <div className="Place">
@@ -107,8 +107,8 @@ const Basket = ({ match: { params: { areaId, itemId }}, foodAreas, order }) => {
         <h3>Время:</h3>
         <div className="Place__choice-item">
           <span>Как можно быстрее</span>
-          <Checkbox 
-            checked={faster} 
+          <Checkbox
+            checked={faster}
             onToggle={() => {
               if (faster) {
                 setFaster(false);
@@ -122,6 +122,7 @@ const Basket = ({ match: { params: { areaId, itemId }}, foodAreas, order }) => {
         <div className="Place__choice-item">
           <span>Назначить</span>
           <input
+            type="time"
             value={time}
             onFocus={() => {
               setFaster(false);
